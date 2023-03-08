@@ -1,0 +1,15 @@
+E:\ProjectC#\Banker\bin\Debug\net6.0\Banker.exe
+E:\ProjectC#\Banker\bin\Debug\net6.0\Banker.deps.json
+E:\ProjectC#\Banker\bin\Debug\net6.0\Banker.runtimeconfig.json
+E:\ProjectC#\Banker\bin\Debug\net6.0\Banker.dll
+E:\ProjectC#\Banker\bin\Debug\net6.0\Banker.pdb
+E:\ProjectC#\Banker\obj\Debug\net6.0\Banker.csproj.AssemblyReference.cache
+E:\ProjectC#\Banker\obj\Debug\net6.0\Banker.GeneratedMSBuildEditorConfig.editorconfig
+E:\ProjectC#\Banker\obj\Debug\net6.0\Banker.AssemblyInfoInputs.cache
+E:\ProjectC#\Banker\obj\Debug\net6.0\Banker.AssemblyInfo.cs
+E:\ProjectC#\Banker\obj\Debug\net6.0\Banker.csproj.CoreCompileInputs.cache
+E:\ProjectC#\Banker\obj\Debug\net6.0\Banker.dll
+E:\ProjectC#\Banker\obj\Debug\net6.0\refint\Banker.dll
+E:\ProjectC#\Banker\obj\Debug\net6.0\Banker.pdb
+E:\ProjectC#\Banker\obj\Debug\net6.0\Banker.genruntimeconfig.cache
+E:\ProjectC#\Banker\obj\Debug\net6.0\ref\Banker.dll

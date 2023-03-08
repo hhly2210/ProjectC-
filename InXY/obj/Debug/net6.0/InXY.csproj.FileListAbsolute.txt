@@ -1,0 +1,15 @@
+E:\ProjectC#\InXY\obj\Debug\net6.0\InXY.csproj.AssemblyReference.cache
+E:\ProjectC#\InXY\obj\Debug\net6.0\InXY.GeneratedMSBuildEditorConfig.editorconfig
+E:\ProjectC#\InXY\obj\Debug\net6.0\InXY.AssemblyInfoInputs.cache
+E:\ProjectC#\InXY\obj\Debug\net6.0\InXY.AssemblyInfo.cs
+E:\ProjectC#\InXY\obj\Debug\net6.0\InXY.csproj.CoreCompileInputs.cache
+E:\ProjectC#\InXY\bin\Debug\net6.0\InXY.exe
+E:\ProjectC#\InXY\bin\Debug\net6.0\InXY.deps.json
+E:\ProjectC#\InXY\bin\Debug\net6.0\InXY.runtimeconfig.json
+E:\ProjectC#\InXY\bin\Debug\net6.0\InXY.dll
+E:\ProjectC#\InXY\bin\Debug\net6.0\InXY.pdb
+E:\ProjectC#\InXY\obj\Debug\net6.0\InXY.dll
+E:\ProjectC#\InXY\obj\Debug\net6.0\refint\InXY.dll
+E:\ProjectC#\InXY\obj\Debug\net6.0\InXY.pdb
+E:\ProjectC#\InXY\obj\Debug\net6.0\InXY.genruntimeconfig.cache
+E:\ProjectC#\InXY\obj\Debug\net6.0\ref\InXY.dll
