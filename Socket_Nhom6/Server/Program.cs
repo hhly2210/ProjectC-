@@ -17,22 +17,22 @@ namespace Server
             IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 8080);
 
             // Tạo socket
-            Socket listener = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+            Socket serverSocket = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 
             // Liên kết socket với địa chỉ và cổng
-            listener.Bind(localEndPoint);
+            serverSocket.Bind(localEndPoint);
 
-            // Bắt đầu lắng nghe kết nối đến (chờ client kết nối)
-            listener.Listen(100);
+            // Bắt đầu chờ kết nối từ các client
+            serverSocket.Listen(10); // chỉ cho phép tối đa là 10 kết nối đồng thời
 
-            Console.WriteLine("Server is listening on port 8080...");
+            Console.WriteLine("Server dc mo tren port 8080...");
 
             while (true)
             {
                 // Chấp nhận kết nối từ client
-                Socket clientSocket = listener.Accept();
+                Socket clientSocket = serverSocket.Accept();
 
-                Console.WriteLine($"Accepted a new connection from {clientSocket.RemoteEndPoint}");
+                Console.WriteLine($"1 ket noi moi dc duyet tu dia chi {clientSocket.RemoteEndPoint}");
 
                 // Tạo một Thread mới để phục vụ client này
                 Thread clientThread = new Thread(() =>
@@ -41,26 +41,31 @@ namespace Server
 
                     while (true)
                     {
+                        // Nhận dữ liệu từ Client
                         data = null;
                         byte[] bytes = new byte[1024];
                         int numBytes = clientSocket.Receive(bytes);
 
                         data += Encoding.ASCII.GetString(bytes, 0, numBytes);
-
+                        
                         // Khi client gửi dữ liệu là "exit" thì đóng kết nối
                         if (data == "exit")
                         {
-                            Console.WriteLine($"Client {clientSocket.RemoteEndPoint} closed the connection.");
+                            Console.WriteLine($"Client {clientSocket.RemoteEndPoint} dong ket noi.");
                             clientSocket.Shutdown(SocketShutdown.Both);
                             clientSocket.Close();
                             break;
                         }
 
-                        Console.WriteLine($"Received {data} from {clientSocket.RemoteEndPoint}");
+                        Console.WriteLine($"[Client]({clientSocket.RemoteEndPoint}): {data}");
 
                         // Phản hồi lại client
-                        byte[] message = Encoding.ASCII.GetBytes($"You said: {data}");
+                        byte[] message = Encoding.ASCII.GetBytes($"{data}");
                         clientSocket.Send(message);
+                        Console.Write("Nhap tin nhan: ");
+                        string sendToClient = Console.ReadLine();
+                        byte[] messageToClient = Encoding.ASCII.GetBytes($"{sendToClient}");
+                        clientSocket.Send(messageToClient);
                     }
                 });
 
